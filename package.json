@@ -1,0 +1,27 @@
+{
+  "name": "insurechain-root",
+  "version": "1.0.0",
+  "description": "InsureChain: Blockchain-Based Insurance Claim Management and Verification System",
+  "scripts": {
+    "test:contract": "node -e \"process.env.APPDATA='d:/InsureChain/.hardhat-global'; process.env.LOCALAPPDATA='d:/InsureChain/.hardhat-global'; require('child_process').execSync('npm --prefix blockchain test', {stdio:'inherit', env: process.env})\"",
+    "test:backend": "npm --prefix backend test",
+    "test:e2e": "node backend/tests/e2e-workflow.test.js",
+    "test:all": "npm run test:contract && npm run test:backend && npm run test:e2e",
+    "compile": "npm --prefix blockchain run compile",
+    "deploy:local": "npm --prefix blockchain run deploy",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend start",
+    "start:frontend": "npm --prefix frontend run dev"
+  },
+  "keywords": [
+    "blockchain",
+    "insurance",
+    "solidity",
+    "hardhat",
+    "ethers",
+    "react",
+    "express"
+  ],
+  "author": "InsureChain Team",
+  "license": "MIT"
+}
